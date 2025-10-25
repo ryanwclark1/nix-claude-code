@@ -1,0 +1,121 @@
+name: Bug Report
+description: Report a bug with the Claude Code Nix package
+title: "[Bug]: "
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the information below to help us investigate.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear description of what the bug is
+      placeholder: What went wrong?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Run command '...'
+        2. See error '...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen
+      placeholder: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened
+      placeholder: What actually happened?
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Claude Code Version
+      description: Output of `claude --version`
+      placeholder: "e.g., 2.0.27"
+    validations:
+      required: true
+
+  - type: input
+    id: nix-version
+    attributes:
+      label: Nix Version
+      description: Output of `nix --version`
+      placeholder: "e.g., nix (Nix) 2.18.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: system
+    attributes:
+      label: System
+      description: What system are you running on?
+      options:
+        - x86_64-linux (Linux 64-bit)
+        - aarch64-linux (Linux ARM64)
+        - x86_64-darwin (macOS Intel)
+        - aarch64-darwin (macOS Apple Silicon)
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: installation
+    attributes:
+      label: Installation Method
+      description: How did you install Claude Code?
+      options:
+        - nix run github:clarkrw1/nix-claude-code
+        - nix profile install
+        - Home Manager
+        - NixOS configuration
+        - direnv
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs
+      description: Any relevant error messages or logs
+      render: shell
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context about the problem
+      placeholder: Screenshots, environment details, etc.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+        - label: I have included the version information requested above
+          required: true
+        - label: I have tried with the latest version from the flake
+          required: false

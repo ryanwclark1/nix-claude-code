@@ -1,0 +1,77 @@
+name: Feature Request
+description: Suggest a new feature for the Claude Code Nix package
+title: "[Feature]: "
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! Please provide as much detail as possible.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem would this feature solve?
+      placeholder: "I would like to... but currently..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How would you like this to work?
+      placeholder: "It would be great if..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What alternative solutions have you considered?
+      placeholder: "I've also thought about..."
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature Category
+      description: What type of feature is this?
+      options:
+        - Package configuration (e.g., runtime options)
+        - Build process improvement
+        - Testing enhancement
+        - Documentation improvement
+        - CI/CD workflow
+        - Integration example
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: Describe your specific use case for this feature
+      placeholder: "In my workflow, I need to..."
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context, screenshots, or examples
+      placeholder: "Here's an example from another project..."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues and PRs to avoid duplicates
+          required: true
+        - label: This feature is related to the Nix packaging (not Claude Code itself)
+          required: true
+        - label: I would be willing to contribute this feature
+          required: false

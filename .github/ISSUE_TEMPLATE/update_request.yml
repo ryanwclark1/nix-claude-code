@@ -1,0 +1,93 @@
+name: Version Update Request
+description: Request a specific Claude Code version or report update issues
+title: "[Update]: "
+labels: ["dependencies", "update"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Note: This repository automatically updates hourly. This template is for:
+        - Requesting a specific version be prioritized
+        - Reporting issues with automated updates
+        - Suggesting improvements to the update process
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Request Type
+      options:
+        - Request specific version
+        - Automated update failed
+        - Update process improvement
+    validations:
+      required: true
+
+  - type: input
+    id: requested-version
+    attributes:
+      label: Requested Version
+      description: If requesting a specific version, which one?
+      placeholder: "e.g., 2.0.27"
+
+  - type: input
+    id: current-version
+    attributes:
+      label: Current Version
+      description: What version is currently in the flake?
+      placeholder: "e.g., 2.0.26"
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason
+      description: Why is this version needed or why did the update fail?
+      placeholder: "I need this version because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Error Details
+      description: If an automated update failed, provide error details
+      placeholder: "The build failed with..."
+      render: shell
+
+  - type: input
+    id: pr-link
+    attributes:
+      label: Related PR
+      description: Link to the automated PR if applicable
+      placeholder: "https://github.com/clarkrw1/nix-claude-code/pull/XXX"
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      options:
+        - Low (Nice to have)
+        - Medium (Needed soon)
+        - High (Blocking work)
+        - Critical (Severe issue)
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: "This affects..."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked that this version is available on npm
+          required: false
+        - label: I have reviewed recent automated update PRs
+          required: true
+        - label: I understand updates normally happen automatically within 1 hour
+          required: true
