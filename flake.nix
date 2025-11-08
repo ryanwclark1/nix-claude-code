@@ -32,7 +32,7 @@
             program = "${pkgs.claude-code}/bin/claude";
             meta = {
               description = "Claude Code - AI coding assistant in your terminal";
-              homepage = "https://github.com/clarkrw1/nix-claude-code";
+              homepage = "https://github.com/ryanwclark1/nix-claude-code";
             };
           };
           claude-code = {
@@ -40,7 +40,7 @@
             program = "${pkgs.claude-code}/bin/claude";
             meta = {
               description = "Claude Code - AI coding assistant in your terminal";
-              homepage = "https://github.com/clarkrw1/nix-claude-code";
+              homepage = "https://github.com/ryanwclark1/nix-claude-code";
             };
           };
         };

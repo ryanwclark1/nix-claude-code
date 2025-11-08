@@ -83,14 +83,14 @@ While Claude Code exists in nixpkgs, our approach offers specific advantages:
 
 ```bash
 # Run Claude Code directly without installing
-nix run github:clarkrw1/nix-claude-code
+nix run github:ryanwclark1/nix-claude-code
 ```
 
 ### Install to Your System
 
 ```bash
 # Install to your profile (survives reboots)
-nix profile install github:clarkrw1/nix-claude-code
+nix profile install github:ryanwclark1/nix-claude-code
 ```
 
 ### Optional: Enable Binary Cache for Faster Installation
@@ -124,7 +124,7 @@ Add to your `flake.nix`:
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    claude-code.url = "github:clarkrw1/nix-claude-code";
+    claude-code.url = "github:ryanwclark1/nix-claude-code";
   };
 
   outputs = { self, nixpkgs, claude-code, ... }: {
@@ -150,7 +150,7 @@ With Home Manager, add to your configuration:
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     home-manager.url = "github:nix-community/home-manager";
-    claude-code.url = "github:clarkrw1/nix-claude-code";
+    claude-code.url = "github:ryanwclark1/nix-claude-code";
   };
 
   outputs = { self, nixpkgs, home-manager, claude-code, ... }: {
@@ -197,7 +197,7 @@ We're exploring support for alternative JavaScript runtimes:
 
 ```bash
 # Clone the repository
-git clone https://github.com/clarkrw1/nix-claude-code
+git clone https://github.com/ryanwclark1/nix-claude-code
 cd nix-claude-code
 
 # Build the package

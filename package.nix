@@ -120,8 +120,8 @@ stdenv.mkDerivation rec {
       The bundled Node.js ensures Claude Code remains available regardless of
       project-specific Node.js version switching (asdf, nvm, devenv).
     '';
-    homepage = "https://github.com/clarkrw1/nix-claude-code";
-    changelog = "https://github.com/clarkrw1/nix-claude-code/releases";
+    homepage = "https://github.com/ryanwclark1/nix-claude-code";
+    changelog = "https://github.com/ryanwclark1/nix-claude-code/releases";
     license = licenses.unfree; # Claude Code is proprietary
     maintainers = with maintainers; [ ]; # Add maintainer handles here
     mainProgram = "claude";

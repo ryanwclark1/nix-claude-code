@@ -59,7 +59,7 @@ body:
     attributes:
       label: Related PR
       description: Link to the automated PR if applicable
-      placeholder: "https://github.com/clarkrw1/nix-claude-code/pull/XXX"
+      placeholder: "https://github.com/ryanwclark1/nix-claude-code/pull/XXX"
 
   - type: dropdown
     id: urgency

@@ -50,10 +50,10 @@ To pin to a specific version, modify `.envrc`:
 
 ```bash
 # Pin to a specific commit
-use flake "github:clarkrw1/nix-claude-code?rev=da133785bb80087238253173a3a3a601dafcfee5"
+use flake "github:ryanwclark1/nix-claude-code?rev=da133785bb80087238253173a3a3a601dafcfee5"
 
 # Pin to a specific flake revision
-use flake "github:clarkrw1/nix-claude-code?ref=refs/tags/v2.0.27"
+use flake "github:ryanwclark1/nix-claude-code?ref=refs/tags/v2.0.27"
 ```
 
 ## Using with Flakes
@@ -64,7 +64,7 @@ You can also add claude-code to your project's `flake.nix`:
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    claude-code.url = "github:clarkrw1/nix-claude-code";
+    claude-code.url = "github:ryanwclark1/nix-claude-code";
   };
 
   outputs = { nixpkgs, claude-code, ... }: {

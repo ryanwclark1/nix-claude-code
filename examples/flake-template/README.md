@@ -51,7 +51,7 @@ nix flake update
 To pin to a specific Claude Code version, modify the input:
 
 ```nix
-claude-code.url = "github:clarkrw1/nix-claude-code?rev=abc123def456";
+claude-code.url = "github:ryanwclark1/nix-claude-code?rev=abc123def456";
 ```
 
 ## Using with direnv

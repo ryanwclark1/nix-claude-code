@@ -45,7 +45,7 @@ nix-claude-code/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/clarkrw1/nix-claude-code.git
+   git clone https://github.com/ryanwclark1/nix-claude-code.git
    cd nix-claude-code
    ```
 
