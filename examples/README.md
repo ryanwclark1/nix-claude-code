@@ -34,10 +34,10 @@ Choose the example that matches your use case:
 
 ```bash
 # Try without installing
-nix run github:clarkrw1/nix-claude-code
+nix run github:ryanwclark1/nix-claude-code
 
 # Install to your profile
-nix profile install github:clarkrw1/nix-claude-code
+nix profile install github:ryanwclark1/nix-claude-code
 
 # Use in a project with direnv
 cp direnv/.envrc /path/to/project/
@@ -63,17 +63,17 @@ All examples support version pinning for reproducibility:
 
 ```nix
 # Pin to specific commit
-claude-code.url = "github:clarkrw1/nix-claude-code?rev=abc123";
+claude-code.url = "github:ryanwclark1/nix-claude-code?rev=abc123";
 
 # Pin to specific tag (when available)
-claude-code.url = "github:clarkrw1/nix-claude-code?ref=refs/tags/v1.0.0";
+claude-code.url = "github:ryanwclark1/nix-claude-code?ref=refs/tags/v1.0.0";
 
 # Use latest (default)
-claude-code.url = "github:clarkrw1/nix-claude-code";
+claude-code.url = "github:ryanwclark1/nix-claude-code";
 ```
 
 ## Getting Help
 
 - **Documentation**: See the [main README](../README.md)
-- **Issues**: https://github.com/clarkrw1/nix-claude-code/issues
+- **Issues**: https://github.com/ryanwclark1/nix-claude-code/issues
 - **Contributing**: See [CONTRIBUTING.md](../CONTRIBUTING.md)

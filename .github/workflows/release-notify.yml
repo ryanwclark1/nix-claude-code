@@ -68,7 +68,7 @@ jobs:
                   }
                 }
               }
-            }' -f owner=clarkrw1 -f repo=nix-claude-code | jq -r '.data.repository.discussionCategories.nodes[] | select(.name=="Announcements") | .id')" \
+            }' -f owner=ryanwclark1 -f repo=nix-claude-code | jq -r '.data.repository.discussionCategories.nodes[] | select(.name=="Announcements") | .id')" \
           -f title="📦 Claude Code $CURRENT_VERSION Released" \
           -f body="## New Version Available: $CURRENT_VERSION
 
@@ -78,10 +78,10 @@ jobs:
 
           \`\`\`bash
           # Run directly
-          nix run github:clarkrw1/nix-claude-code
+          nix run github:ryanwclark1/nix-claude-code
 
           # Install to profile
-          nix profile install github:clarkrw1/nix-claude-code
+          nix profile install github:ryanwclark1/nix-claude-code
 
           # Update existing installation
           nix profile upgrade claude-code
@@ -98,7 +98,7 @@ jobs:
           To pin to this specific version in your flake:
 
           \`\`\`nix
-          inputs.claude-code.url = \"github:clarkrw1/nix-claude-code?rev=${{ github.sha }}\";
+          inputs.claude-code.url = \"github:ryanwclark1/nix-claude-code?rev=${{ github.sha }}\";
           \`\`\`
 
           ### Changes
@@ -111,9 +111,9 @@ jobs:
 
           ### Documentation
 
-          - [README.md](https://github.com/clarkrw1/nix-claude-code/blob/main/README.md) - Installation and usage
-          - [VERSIONING.md](https://github.com/clarkrw1/nix-claude-code/blob/main/VERSIONING.md) - Version management
-          - [examples/](https://github.com/clarkrw1/nix-claude-code/tree/main/examples) - Integration examples
+          - [README.md](https://github.com/ryanwclark1/nix-claude-code/blob/main/README.md) - Installation and usage
+          - [VERSIONING.md](https://github.com/ryanwclark1/nix-claude-code/blob/main/VERSIONING.md) - Version management
+          - [examples/](https://github.com/ryanwclark1/nix-claude-code/tree/main/examples) - Integration examples
 
           ---
 

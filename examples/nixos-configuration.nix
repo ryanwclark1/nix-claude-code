@@ -45,7 +45,7 @@
 # {
 #   inputs = {
 #     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-#     claude-code.url = "github:clarkrw1/nix-claude-code";
+#     claude-code.url = "github:ryanwclark1/nix-claude-code";
 #   };
 #
 #   outputs = { self, nixpkgs, claude-code, ... }: {

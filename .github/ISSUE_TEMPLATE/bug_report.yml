@@ -85,7 +85,7 @@ body:
       label: Installation Method
       description: How did you install Claude Code?
       options:
-        - nix run github:clarkrw1/nix-claude-code
+        - nix run github:ryanwclark1/nix-claude-code
         - nix profile install
         - Home Manager
         - NixOS configuration

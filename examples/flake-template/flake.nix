@@ -14,7 +14,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    claude-code.url = "github:clarkrw1/nix-claude-code";
+    claude-code.url = "github:ryanwclark1/nix-claude-code";
   };
 
   outputs = { self, nixpkgs, flake-utils, claude-code }:

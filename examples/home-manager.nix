@@ -53,7 +53,7 @@
 #       url = "github:nix-community/home-manager";
 #       inputs.nixpkgs.follows = "nixpkgs";
 #     };
-#     claude-code.url = "github:clarkrw1/nix-claude-code";
+#     claude-code.url = "github:ryanwclark1/nix-claude-code";
 #   };
 #
 #   outputs = { nixpkgs, home-manager, claude-code, ... }: {

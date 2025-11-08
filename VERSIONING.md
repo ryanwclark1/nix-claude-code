@@ -15,10 +15,10 @@ By default, using the flake gives you the latest version:
 
 ```bash
 # Always use latest
-nix run github:clarkrw1/nix-claude-code
+nix run github:ryanwclark1/nix-claude-code
 
 # Install latest to profile
-nix profile install github:clarkrw1/nix-claude-code
+nix profile install github:ryanwclark1/nix-claude-code
 ```
 
 ## Pinning to Specific Versions
@@ -30,7 +30,7 @@ The most reliable way to pin to a specific version:
 ```nix
 {
   inputs = {
-    claude-code.url = "github:clarkrw1/nix-claude-code?rev=da133785bb80087238253173a3a3a601dafcfee5";
+    claude-code.url = "github:ryanwclark1/nix-claude-code?rev=da133785bb80087238253173a3a3a601dafcfee5";
   };
 }
 ```
@@ -51,7 +51,7 @@ Let Nix manage the version via `flake.lock`:
 ```nix
 {
   inputs = {
-    claude-code.url = "github:clarkrw1/nix-claude-code";
+    claude-code.url = "github:ryanwclark1/nix-claude-code";
   };
 }
 ```
@@ -95,10 +95,10 @@ Use a local checkout for development or testing:
 claude --version
 
 # Check flake version without installing
-nix eval github:clarkrw1/nix-claude-code#packages.x86_64-linux.claude-code.version
+nix eval github:ryanwclark1/nix-claude-code#packages.x86_64-linux.claude-code.version
 
 # Check what version a specific commit provides
-nix eval github:clarkrw1/nix-claude-code?rev=abc123#packages.x86_64-linux.claude-code.version
+nix eval github:ryanwclark1/nix-claude-code?rev=abc123#packages.x86_64-linux.claude-code.version
 ```
 
 ## Version Update Strategies
@@ -106,7 +106,7 @@ nix eval github:clarkrw1/nix-claude-code?rev=abc123#packages.x86_64-linux.claude
 ### Strategy 1: Always Latest (Recommended for Personal Use)
 
 ```nix
-inputs.claude-code.url = "github:clarkrw1/nix-claude-code";
+inputs.claude-code.url = "github:ryanwclark1/nix-claude-code";
 ```
 
 **Pros:**
@@ -122,7 +122,7 @@ inputs.claude-code.url = "github:clarkrw1/nix-claude-code";
 ### Strategy 2: Locked with Periodic Updates (Recommended for Teams)
 
 ```nix
-inputs.claude-code.url = "github:clarkrw1/nix-claude-code";
+inputs.claude-code.url = "github:ryanwclark1/nix-claude-code";
 ```
 
 Then update explicitly:
@@ -145,7 +145,7 @@ nix flake update claude-code
 ### Strategy 3: Pinned to Specific Version (Maximum Stability)
 
 ```nix
-inputs.claude-code.url = "github:clarkrw1/nix-claude-code?rev=da133785bb80087238253173a3a3a601dafcfee5";
+inputs.claude-code.url = "github:ryanwclark1/nix-claude-code?rev=da133785bb80087238253173a3a3a601dafcfee5";
 ```
 
 **Pros:**
@@ -171,7 +171,7 @@ git log --oneline --all | grep "version 2.0.26"
 # Output: 88db4ca chore: update claude-code to version 2.0.26
 
 # Use that specific version
-nix run github:clarkrw1/nix-claude-code?rev=88db4ca
+nix run github:ryanwclark1/nix-claude-code?rev=88db4ca
 ```
 
 ### Method 2: Use Flake Lock History
@@ -205,7 +205,7 @@ While we bundle Node.js 22 LTS, you can override if needed:
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    claude-code.url = "github:clarkrw1/nix-claude-code";
+    claude-code.url = "github:ryanwclark1/nix-claude-code";
   };
 
   outputs = { nixpkgs, claude-code, ... }: {
@@ -230,7 +230,7 @@ Subscribe to updates:
 2. **GitHub Discussions**: New versions are announced in Discussions
 3. **RSS Feed**: Subscribe to releases RSS feed:
    ```
-   https://github.com/clarkrw1/nix-claude-code/releases.atom
+   https://github.com/ryanwclark1/nix-claude-code/releases.atom
    ```
 
 ## Troubleshooting Version Issues
@@ -245,7 +245,7 @@ nix-collect-garbage
 nix flake update
 
 # Rebuild
-nix build github:clarkrw1/nix-claude-code
+nix build github:ryanwclark1/nix-claude-code
 ```
 
 ### Problem: Old version persists after update
@@ -259,7 +259,7 @@ nix flake update --recreate-lock-file
 
 # For nix profile installations, reinstall
 nix profile remove claude-code
-nix profile install github:clarkrw1/nix-claude-code
+nix profile install github:ryanwclark1/nix-claude-code
 ```
 
 ### Problem: Want specific version not in repository
