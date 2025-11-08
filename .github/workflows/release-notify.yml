@@ -40,8 +40,12 @@ jobs:
             echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
+      # GitHub Discussions disabled - to enable:
+      # 1. Go to repo Settings -> General -> Features -> enable Discussions
+      # 2. Create an "Announcements" category in Discussions
+      # 3. Change the if condition below to: steps.version.outputs.changed == 'true'
       - name: Create discussion post
-        if: steps.version.outputs.changed == 'true'
+        if: false  # Disabled until Discussions are configured
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -122,9 +126,9 @@ jobs:
       - name: Create summary
         if: steps.version.outputs.changed == 'true'
         run: |
-          echo "## Release Notification Posted" >> $GITHUB_STEP_SUMMARY
+          echo "## Version Update Detected" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- **Previous Version:** ${{ steps.version.outputs.previous }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Current Version:** ${{ steps.version.outputs.current }}" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "A discussion post has been created announcing the new version." >> $GITHUB_STEP_SUMMARY
+          echo "ℹ️ Discussion notifications are currently disabled. Enable them in the workflow file." >> $GITHUB_STEP_SUMMARY
